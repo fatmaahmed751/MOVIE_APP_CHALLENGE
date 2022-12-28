@@ -1,10 +1,10 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
+import 'package:movie_app_challenge/core/services/service_locator.dart';
+import 'movies/presentation/screens/movies_screen.dart';
 
 void main() {
- // ServicesLocator().init();
-//  HttpOverrides.global =  HttpOverrides();
+ ServicesLocator().init();
   runApp(const MyApp());
 }
 
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title:"Movies App",
-      //home:MoviesScreen(),
+      home:MoviesScreen(),
     );
   }
 }
