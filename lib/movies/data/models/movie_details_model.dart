@@ -5,7 +5,7 @@ import 'package:movie_app_challenge/movies/domain/entities/movie_details.dart';
 
 class MovieDetailsModel extends MovieDetails{
  const  MovieDetailsModel({
-    required super.backdropPath,
+   required  super.backdropPath,
    required super.id,
    required super.genres,
    required super.overView,

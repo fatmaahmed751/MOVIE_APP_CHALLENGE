@@ -9,7 +9,7 @@ class MovieDetails extends Equatable{
  final String releaseDate;
  final int runTime;
  final String title;
- final String voteAverage;
+ final double voteAverage;
 
  const MovieDetails({
    required this.backdropPath,
@@ -22,6 +22,6 @@ class MovieDetails extends Equatable{
     required this.voteAverage});
 
   @override
-  List<Object?> get props => [backdropPath,id,overView,releaseDate,runTime,title,voteAverage,genres];
+  List<Object> get props => [backdropPath,id,overView,releaseDate,runTime,title,voteAverage,genres];
 
 }

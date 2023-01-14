@@ -2,6 +2,7 @@ import 'package:equatable/equatable.dart';
 
 import 'package:movie_app_challenge/core/utils/enums.dart';
 import 'package:movie_app_challenge/movies/domain/entities/movie.dart';
+import 'package:movie_app_challenge/movies/domain/entities/recommendation.dart';
 
 class MoviesStates extends Equatable{
 
@@ -15,7 +16,10 @@ class MoviesStates extends Equatable{
    final RequestState topRatedState ;
    final String topRatedMessage;
 
-const  MoviesStates({
+
+
+   const  MoviesStates({
+
    this.nowPlayingMovies= const [],
    this.nowPlayingState=RequestState.loading,
    this.nowPlayingMessage="",
@@ -38,6 +42,7 @@ MoviesStates copyWith({
   List<Movie>? topRatedMovies,
   RequestState? topRatedState,
   String? topRatedMessage,
+
 }){
   return MoviesStates(
       nowPlayingMovies:nowPlayingMovies??this.nowPlayingMovies,
@@ -49,6 +54,7 @@ MoviesStates copyWith({
     topRatedMovies: topRatedMovies??this.topRatedMovies,
     topRatedState: topRatedState??this.topRatedState,
     topRatedMessage: topRatedMessage??this.topRatedMessage,
+
   );
 }
 
@@ -59,6 +65,7 @@ MoviesStates copyWith({
     nowPlayingMovies,nowPlayingState,nowPlayingMessage,
      popularMovies,popularState,popularMessage,
      topRatedMovies,topRatedState,topRatedMessage,
+
    ];
 
 }

@@ -5,8 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie_app_challenge/core/utils/app_constants/constants.dart';
 import 'package:movie_app_challenge/core/utils/enums.dart';
+import 'package:movie_app_challenge/movies/domain/entities/movie_details.dart';
 import 'package:movie_app_challenge/movies/presentation/controllers/movies_bloc.dart';
 import 'package:movie_app_challenge/movies/presentation/controllers/movies_states.dart';
+import 'package:movie_app_challenge/movies/presentation/screens/movie_details_screen.dart';
 
 class NowPlayingComponents extends StatelessWidget {
   const NowPlayingComponents({Key? key}) : super(key: key);
@@ -15,8 +17,6 @@ class NowPlayingComponents extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<MoviesBloc, MoviesStates>(
       builder: (context, state) {
-     //   print(state);
-      print("bloc NowPlayingComponents");
         switch(state.nowPlayingState)
         {
           case RequestState.loading:
@@ -37,7 +37,7 @@ class NowPlayingComponents extends StatelessWidget {
                     return GestureDetector(
                       key: const Key('openMovieMinimalDetail'),
                       onTap: () {
-                        /// TODO : NAVIGATE TO MOVIE DETAILS
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>MovieDetailScreen(id:item.id)));
                       },
                       child: Stack(
                         children: [

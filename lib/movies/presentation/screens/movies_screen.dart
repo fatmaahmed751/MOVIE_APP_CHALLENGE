@@ -44,7 +44,7 @@ class MoviesScreen extends StatelessWidget {
                     ),
                     InkWell(
                       onTap: () {
-                        /// TODO : NAVIGATION TO POPULAR SCREEN
+                        Navigator.push(context,MaterialPageRoute(builder: (context)=>const PopularComponents()));
                       },
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -88,7 +88,7 @@ class MoviesScreen extends StatelessWidget {
                     ),
                     InkWell(
                       onTap: () {
-                        /// TODO : NAVIGATION TO Top Rated Movies Screen
+                        Navigator.push(context,MaterialPageRoute(builder: (context)=>const TopRatedComponents()));
                       },
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
